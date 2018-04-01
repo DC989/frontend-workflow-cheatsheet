@@ -1339,6 +1339,9 @@ a.text-dark:focus,a.text-dark:hover{color:#1d2124!important}
 html {
     font-family: sans-serif;
 }
+body {
+    font-family: 'Lato', sans-serif;
+}
 html, body {
     position: relative;
     min-height: 100%;
@@ -1349,4 +1352,141 @@ img {
 }
 /* ============================================================================== */
 /* ===========================End of Custom Global.css=========================== */
+/* ============================================================================== */
+/* ============================================================================== */
+/* ===========================Start of Custom Btn.css============================ */
+/* ============================================================================== */
+.btn--custom {
+        border: 0;
+        border-radius: 0;
+        text-transform: uppercase;
+        background-color: #00bc9c;
+        font-size: .6rem;
+        padding: 8px 13px;
+    }
+@media (min-width: 768px) {
+.btn--large {
+            padding: 15px 30px;
+            font-size: 1.2rem
+    }
+    }
+/* ============================================================================== */
+/* =============================End of Custom Btn.css============================ */
+/* ============================================================================== */
+/* ============================================================================== */
+/* ===========================Start of Custom Hero.css=========================== */
+/* ============================================================================== */
+.hero {
+    position: relative;
+}
+.hero__title {
+        margin-bottom: 0;
+        font-size: 2rem;
+        font-weight: 400;
+        color: #fff;
+        text-transform: uppercase;
+    }
+@media (min-width: 576px) {
+.hero__title {
+            font-size: 2.8rem
+    }
+    }
+@media (min-width: 768px) {
+.hero__title {
+            font-size: 3.625rem
+    }
+    }
+.hero__text {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: .8rem;
+        font-weight: 400;
+        color: #a3b1bf;
+    }
+@media (min-width: 576px) {
+.hero__text {
+            font-size: 1.375rem
+    }
+    }
+@media (min-width: 768px) {
+.hero__text {
+            margin-bottom: 60px
+    }
+    }
+/* ============================================================================== */
+/* ============================End of Custom Hero.css============================ */
+/* ============================================================================== */
+/* ============================================================================== */
+/* ===========================Start of Custom Carousel.css=========================== */
+/* ============================================================================== */
+.carousel-caption {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+    }
+.carousel-indicators {
+        display: none;
+    }
+@media (min-width: 768px) {
+.carousel-indicators {
+            display: flex;
+            background-color: white;
+            width: 145px;
+            padding-top: 13px;
+            padding-bottom: 13px;
+            bottom: -22.5px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 0;
+            border-radius: 2px
+    }
+    }
+.carousel-indicators li {
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+            background-color: #506a85;
+            margin-left: 0;
+            margin-right: 10px;
+        }
+.carousel-indicators li:last-child {
+                margin-right: 0;
+            }
+.carousel-indicators li.active {
+                background-color: #00bc9c;
+            }
+.carousel-control-prev-icon {
+        background-color: #7e98b3;
+        height: 60px;
+        width: 60px;
+        border-radius: 2px;
+        background-image: none;
+        line-height: 60px;
+        text-align: center;
+    }
+.carousel-control-prev-icon:after {
+            content: '<';
+            font-size: 55px;
+            color: #a8bcd0;
+        }
+.carousel-control-next-icon {
+        background-color: #7e98b3;
+        height: 60px;
+        width: 60px;
+        border-radius: 2px;
+        background-image: none;
+        line-height: 60px;
+        text-align: center;
+    }
+.carousel-control-next-icon:after {
+            content: '>';
+            font-size: 55px;
+            color: #a8bcd0;
+        }
+/* ============================================================================== */
+/* ============================End of Custom Carousel.css============================ */
 /* ============================================================================== */

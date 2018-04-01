@@ -1,0 +1,20 @@
+.btn {
+
+    &--custom {
+        border: 0;
+        border-radius: 0;
+        text-transform: uppercase;
+        background-color: $primaryPale;
+        font-size: .6rem;
+        padding: 8px 13px;
+    }
+
+    &--large {
+
+        @mixin atMedium {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+        }
+    }
+
+}

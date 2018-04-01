@@ -1,0 +1,78 @@
+.carousel {
+
+    &-caption {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &-indicators {
+        display: none;
+
+        @mixin atMedium {
+            display: flex;
+            background-color: white;
+            width: 145px;
+            padding-top: 13px;
+            padding-bottom: 13px;
+            bottom: -22.5px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 0;
+            border-radius: 2px;
+        }
+
+        li {
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+            background-color: $primaryBlue;
+            margin-left: 0;
+            margin-right: 10px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &.active {
+                background-color: $primaryPale;
+            }
+        }
+    }
+
+    &-control-prev-icon {
+        background-color: #7e98b3;
+        height: 60px;
+        width: 60px;
+        border-radius: 2px;
+        background-image: none;
+        line-height: 60px;
+        text-align: center;
+
+        &:after {
+            content: '<';
+            font-size: 55px;
+            color: #a8bcd0;
+        }
+    }
+
+    &-control-next-icon {
+        background-color: #7e98b3;
+        height: 60px;
+        width: 60px;
+        border-radius: 2px;
+        background-image: none;
+        line-height: 60px;
+        text-align: center;
+
+        &:after {
+            content: '>';
+            font-size: 55px;
+            color: #a8bcd0;
+        }
+    }
+
+}
