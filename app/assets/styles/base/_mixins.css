@@ -21,3 +21,18 @@
         @mixin-content;
     }
 }
+
+@define-mixin clearfix {
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+
+@define-mixin lineBreak {
+    &:after { 
+        content: "\A";
+        white-space: pre; 
+    }
+}

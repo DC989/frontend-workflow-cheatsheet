@@ -1,12 +1,20 @@
 .carousel {
 
     &-caption {
+        display: table;
         left: 0;
         right: 0;
         bottom: 0;
+        margin: 0;
         padding: 0;
         top: 50%;
         transform: translateY(-50%);
+
+        @mixin atExtraLarge {
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     &-indicators {
@@ -43,35 +51,26 @@
         }
     }
 
-    &-control-prev-icon {
-        background-color: #7e98b3;
-        height: 60px;
-        width: 60px;
+    &-control-prev__icon-wrapper,
+    &-control-next__icon-wrapper {
+        padding: 6.5px;
+        line-height: 0;
         border-radius: 2px;
-        background-image: none;
-        line-height: 60px;
-        text-align: center;
+        background-color: #7c96b1;
 
-        &:after {
-            content: '<';
-            font-size: 55px;
-            color: #a8bcd0;
+        @mixin atMedium {
+            padding: 16.5px;
         }
     }
 
+    &-control-prev-icon,
     &-control-next-icon {
-        background-color: #7e98b3;
-        height: 60px;
-        width: 60px;
-        border-radius: 2px;
-        background-image: none;
-        line-height: 60px;
-        text-align: center;
+        height: 17px;
+        width: 17px;
 
-        &:after {
-            content: '>';
-            font-size: 55px;
-            color: #a8bcd0;
+        @mixin atMedium {
+            height: 27px;
+            width: 27px;
         }
     }
 

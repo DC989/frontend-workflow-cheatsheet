@@ -1363,6 +1363,7 @@ img {
         background-color: #00bc9c;
         font-size: .6rem;
         padding: 8px 13px;
+        color: #fff;
     }
 @media (min-width: 768px) {
 .btn--large {
@@ -1379,9 +1380,42 @@ img {
 .hero {
     position: relative;
 }
+.hero__caption {
+        /*
+        display: block;
+        vertical-align: middle;
+        */
+        text-align: center;
+        padding-left: 55px;
+        padding-right: 55px;
+    }
+.hero__caption--align-right {
+            text-align: right;
+        }
+.hero__caption--align-left {
+            text-align: left;
+        }
+.hero__caption--clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+@media (min-width: 768px) {
+.hero__caption {
+            padding-left: 100px;
+            padding-right: 100px
+    }
+    }
+@media (min-width: 1200px) {
+.hero__caption {
+            padding-left: 150px;
+            padding-right: 150px
+    }
+    }
 .hero__title {
-        margin-bottom: 0;
-        font-size: 2rem;
+        display: inline-block;
+        margin: 0;
+        font-size: 1.5rem;
         font-weight: 400;
         color: #fff;
         text-transform: uppercase;
@@ -1396,9 +1430,43 @@ img {
             font-size: 3.625rem
     }
     }
+@media (min-width: 1200px) {
+.hero__title {
+            font-size: 3.375rem;
+            font-weight: 700
+    }
+    }
+.hero__title--float-left {
+            float: left;
+            clear: left;
+        }
+.hero__title--float-right {
+            float: right;
+            clear: right;
+        }
+.hero__title--line-break:after { 
+        content: "\A";
+        white-space: pre; 
+    }
+@media (min-width: 1200px) {
+.hero__title--padding {
+                padding: 15px 30px
+        }
+    }
+.hero__title--blue-bg-color {
+            background-color: #506a85;
+        }
+.hero__title--margin-bottom {
+            margin-bottom: 5px;
+        }
+@media (min-width: 1200px) {
+.hero__title--margin-bottom {
+                margin-bottom: 5px
+        }
+    }
 .hero__text {
-        padding-left: 20px;
-        padding-right: 20px;
+        margin: 0;
+        padding: 0;
         font-size: .8rem;
         font-weight: 400;
         color: #a3b1bf;
@@ -1408,11 +1476,24 @@ img {
             font-size: 1.375rem
     }
     }
-@media (min-width: 768px) {
-.hero__text {
-            margin-bottom: 60px
-    }
-    }
+.hero__text--white {
+            color: #fff;
+        }
+.hero__text--blue-font {
+            color: #506a85;
+        }
+.hero__text--margin-top {
+            margin-top: 5px;
+        }
+.hero__text--margin-bottom {
+            margin-bottom: 25px;
+        }
+.hero__text--clear-left {
+            clear: left;
+        }
+.hero__text--clear-right {
+            clear: right;
+        }
 /* ============================================================================== */
 /* ============================End of Custom Hero.css============================ */
 /* ============================================================================== */
@@ -1420,13 +1501,22 @@ img {
 /* ===========================Start of Custom Carousel.css=========================== */
 /* ============================================================================== */
 .carousel-caption {
+        display: table;
         left: 0;
         right: 0;
         bottom: 0;
+        margin: 0;
         padding: 0;
         top: 50%;
         -webkit-transform: translateY(-50%);
                 transform: translateY(-50%);
+    }
+@media (min-width: 1200px) {
+.carousel-caption {
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto
+    }
     }
 .carousel-indicators {
         display: none;
@@ -1459,34 +1549,31 @@ img {
 .carousel-indicators li.active {
                 background-color: #00bc9c;
             }
-.carousel-control-prev-icon {
-        background-color: #7e98b3;
-        height: 60px;
-        width: 60px;
+.carousel-control-prev__icon-wrapper,
+    .carousel-control-next__icon-wrapper {
+        padding: 6.5px;
+        line-height: 0;
         border-radius: 2px;
-        background-image: none;
-        line-height: 60px;
-        text-align: center;
+        background-color: #7c96b1;
     }
-.carousel-control-prev-icon:after {
-            content: '<';
-            font-size: 55px;
-            color: #a8bcd0;
-        }
-.carousel-control-next-icon {
-        background-color: #7e98b3;
-        height: 60px;
-        width: 60px;
-        border-radius: 2px;
-        background-image: none;
-        line-height: 60px;
-        text-align: center;
+@media (min-width: 768px) {
+.carousel-control-prev__icon-wrapper,
+    .carousel-control-next__icon-wrapper {
+            padding: 16.5px
     }
-.carousel-control-next-icon:after {
-            content: '>';
-            font-size: 55px;
-            color: #a8bcd0;
-        }
+    }
+.carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        height: 17px;
+        width: 17px;
+    }
+@media (min-width: 768px) {
+.carousel-control-prev-icon,
+    .carousel-control-next-icon {
+            height: 27px;
+            width: 27px
+    }
+    }
 /* ============================================================================== */
 /* ============================End of Custom Carousel.css============================ */
 /* ============================================================================== */

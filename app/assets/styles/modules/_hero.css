@@ -1,9 +1,42 @@
 .hero {
     position: relative;
 
+    &__caption {
+        /*
+        display: block;
+        vertical-align: middle;
+        */
+        text-align: center;
+        padding-left: 55px;
+        padding-right: 55px;
+
+        &--align-right {
+            text-align: right;
+        }
+
+        &--align-left {
+            text-align: left;
+        }
+
+        &--clearfix {
+            @mixin clearfix;
+        }
+
+        @mixin atMedium {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        @mixin atExtraLarge {
+            padding-left: 150px;
+            padding-right: 150px;
+        }
+    }
+
     &__title {
-        margin-bottom: 0;
-        font-size: 2rem;
+        display: inline-block;
+        margin: 0;
+        font-size: 1.5rem;
         font-weight: 400;
         color: #fff;
         text-transform: uppercase;
@@ -15,11 +48,49 @@
         @mixin atMedium {
             font-size: 3.625rem;
         }
+
+        @mixin atExtraLarge {
+            font-size: 3.375rem;
+            font-weight: 700;
+        }
+
+        &--float-left {
+            float: left;
+            clear: left;
+        }
+
+        &--float-right {
+            float: right;
+            clear: right;
+        }
+
+        &--line-break {
+            @mixin lineBreak;
+        }
+
+        &--padding {
+
+            @mixin atExtraLarge {
+                padding: 15px 30px;
+            }
+        }
+
+        &--blue-bg-color {
+            background-color: $primaryBlue;
+        }
+
+        &--margin-bottom {
+            margin-bottom: 5px;
+
+            @mixin atExtraLarge {
+                margin-bottom: 5px;
+            }
+        }
     }
 
     &__text {
-        padding-left: 20px;
-        padding-right: 20px;
+        margin: 0;
+        padding: 0;
         font-size: .8rem;
         font-weight: 400;
         color: $secondaryBlue;
@@ -28,8 +99,28 @@
             font-size: 1.375rem;
         }
 
-        @mixin atMedium {
-            margin-bottom: 60px;
+        &--white {
+            color: #fff;
+        }
+
+        &--blue-font {
+            color: $primaryBlue;
+        }
+
+        &--margin-top {
+            margin-top: 5px;
+        }
+
+        &--margin-bottom {
+            margin-bottom: 25px;
+        }
+
+        &--clear-left {
+            clear: left;
+        }
+
+        &--clear-right {
+            clear: right;
         }
     }
 }
