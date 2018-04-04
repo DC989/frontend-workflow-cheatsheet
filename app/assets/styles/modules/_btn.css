@@ -1,19 +1,30 @@
 .btn {
+    transition: background-color .3s;
+
+    &:link,
+    &:visited {
+        background-color: $primaryPale;
+        box-shadow: none;
+    }
+
+    &:hover,
+    &:active {
+        background-color: $secondaryPale;
+    }
 
     &--custom {
         border: 0;
-        border-radius: 0;
+        border-radius: 0.125rem;
         text-transform: uppercase;
-        background-color: $primaryPale;
         font-size: .6rem;
-        padding: 8px 13px;
+        padding: 0.5rem 0.8125rem;
         color: #fff;
     }
 
     &--large {
 
         @mixin atMedium {
-            padding: 15px 30px;
+            padding: 0.9375rem 1.875rem;
             font-size: 1.2rem;
         }
     }

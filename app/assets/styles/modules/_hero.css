@@ -2,13 +2,8 @@
     position: relative;
 
     &__caption {
-        /*
-        display: block;
-        vertical-align: middle;
-        */
+        display: table-row;
         text-align: center;
-        padding-left: 55px;
-        padding-right: 55px;
 
         &--align-right {
             text-align: right;
@@ -21,22 +16,12 @@
         &--clearfix {
             @mixin clearfix;
         }
-
-        @mixin atMedium {
-            padding-left: 100px;
-            padding-right: 100px;
-        }
-
-        @mixin atExtraLarge {
-            padding-left: 150px;
-            padding-right: 150px;
-        }
     }
 
     &__title {
         display: inline-block;
         margin: 0;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-weight: 400;
         color: #fff;
         text-transform: uppercase;
@@ -46,12 +31,16 @@
         }
 
         @mixin atMedium {
-            font-size: 3.625rem;
+            font-size: 3rem;
         }
 
         @mixin atExtraLarge {
-            font-size: 3.375rem;
+            font-size: 3.625rem;
             font-weight: 700;
+        }
+
+        &--display-block {
+            display: block;
         }
 
         &--float-left {
@@ -69,9 +58,14 @@
         }
 
         &--padding {
+            padding: 0.3125rem 0.625rem;
+
+            @mixin atMedium {
+                padding: 0.625rem 1.5625rem;
+            }
 
             @mixin atExtraLarge {
-                padding: 15px 30px;
+                padding: 2.1875rem 2.5625rem;
             }
         }
 
@@ -80,10 +74,10 @@
         }
 
         &--margin-bottom {
-            margin-bottom: 5px;
+            margin-bottom: 0.125rem;
 
-            @mixin atExtraLarge {
-                margin-bottom: 5px;
+            @mixin atMedium {
+                margin-bottom: 0.3125rem;
             }
         }
     }
@@ -96,7 +90,11 @@
         color: $secondaryBlue;
 
         @mixin atSmall {
-            font-size: 1.375rem;
+            font-size: 1.125rem;
+        }
+
+        @mixin atLarge {
+            font-size: 1.4375rem;
         }
 
         &--white {
@@ -108,11 +106,15 @@
         }
 
         &--margin-top {
-            margin-top: 5px;
+            margin-top: 0.3125rem;
         }
 
         &--margin-bottom {
-            margin-bottom: 25px;
+            margin-bottom: 0.9375rem;
+
+            @mixin atMedium {
+                margin-bottom: 3.4375rem;
+            }
         }
 
         &--clear-left {
